@@ -1,10 +1,9 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - causes an infinite loop
  *
- * Description: This function demonstrates an infinite loop and its avoidance.
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
@@ -13,14 +12,14 @@ int main(void)
     printf("infinite loop incoming :(\n");
     i = 0;
     /*
-     * while (i < 10)
-     * {
-     *     putchar(i);
-     *     i++;
-     * }
-     */
+    while (i < 10)
+    {
+        putchar(i);
+        i++;
+    }
+    */
     printf("infinite loop avoided \\o/\n");
 
-    return (0);
+    return 0;
 }
 
