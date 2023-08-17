@@ -6,19 +6,19 @@
  */
 int main(void)
 {
+    int i;
 
-int i;
+    printf("infinite loop incoming :(\n");
+    i = 0;
+    /*
+    while (i < 10)
+    {
+        putchar(i);
+        i++;
+    }
+    */
+    printf("infinite loop avoided \\o/\n");
 
-printf("infinite loop incoming :(\n");
-i = 0;
-/*
-  while (i < 10)
- *{
- *           putchar(i):
- *}
- */
-printf("infinite loop avoided \\o/\n"):	
-
-	return (0);
+    return 0;
 }
 
