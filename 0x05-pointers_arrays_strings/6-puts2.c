@@ -3,6 +3,9 @@
 /**
  * puts2 - Prints every other character of a string
  * @str: Input string
+ *
+ * Description: This function prints every other character of a string,
+ * starting from the first character.
  * Return: void
  */
 void puts2(char *str)
@@ -27,4 +30,3 @@ void puts2(char *str)
         }
     }
     _putchar('\n');
-}
