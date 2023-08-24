@@ -1,35 +1,41 @@
 #include "main.h"
 
 /**
- * cap_string - capitalizes all words of a string.
- * @str: The string to the capoitalized.
- * Return: A pointer to the changed string.
+ * cap_string - Capitalizes the first letter of each word in a string.
+ * @str: The input string.
+ * Return: A pointer to the modified string.
  */
 char *cap_string(char *str)
 {
-	int index = 0;
+    int index = 0;
 
-	while (str[index])
-	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
+    while (str[index])
+    {
+        while (!(str[index] >= 'a' && str[index] <= 'z'))
+        {
+            index++;
+        }
 
-			index++;
-		if (str[index - 1] == ' ' ||
-		str[index - 1] == '\t' ||
-		str[index - 1] == '\n' ||
-		str[index - 1] == ',' ||
-		str[index - 1] == ';' ||
-		str[index - 1] == '.' ||
-		str[index - 1] == '!' ||
-		str[index - 1] == '?' ||
-		str[index - 1] == '"' ||
-		str[index - 1] == '(' ||
-		str[index - 1] == ')' ||
-		str[index - 1] == '{' ||
-		str[index - 1] == '}' ||
-		index == 0)
-			str[index] -= 32;
-		index++;
-	}
-	return (str);
+        if (index == 0 ||
+            str[index - 1] == ' ' ||
+            str[index - 1] == '\t' ||
+            str[index - 1] == '\n' ||
+            str[index - 1] == ',' ||
+            str[index - 1] == ';' ||
+            str[index - 1] == '.' ||
+            str[index - 1] == '!' ||
+            str[index - 1] == '?' ||
+            str[index - 1] == '"' ||
+            str[index - 1] == '(' ||
+            str[index - 1] == ')' ||
+            str[index - 1] == '{' ||
+            str[index - 1] == '}')
+        {
+            str[index] -= 32; // Convert lowercase to uppercase.
+        }
+
+        index++;
+    }
+
+    return str;
 }
