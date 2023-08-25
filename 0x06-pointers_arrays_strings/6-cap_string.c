@@ -3,6 +3,7 @@
 /**
  * cap_string - Capitalizes the first letter of each word in a string.
  * @str: The input string.
+ *
  * Return: A pointer to the modified string.
  */
 char *cap_string(char *str)
@@ -12,9 +13,7 @@ char *cap_string(char *str)
     while (str[index])
     {
         while (!(str[index] >= 'a' && str[index] <= 'z'))
-        {
             index++;
-        }
 
         if (index == 0 ||
             str[index - 1] == ' ' ||
@@ -31,7 +30,7 @@ char *cap_string(char *str)
             str[index - 1] == '{' ||
             str[index - 1] == '}')
         {
-            str[index] -= 32; // Convert lowercase to uppercase.
+            str[index] -= 32;
         }
 
         index++;
